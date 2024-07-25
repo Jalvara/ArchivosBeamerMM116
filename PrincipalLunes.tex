@@ -1,0 +1,121 @@
+\documentclass[12pt]{beamer}
+%\documentclass[12pt,draft]{beamer} %Para dejar solo el contenido
+\usetheme{Berlin}
+%===================Temas predefinidos de colores=========================
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%===================Ajustes personalizados de colores ====================
+\usepackage{xcolor}%Para ajustes sobre colores.  
+\definecolor{Color1}{RGB}{0,200,0}
+\definecolor{Color2}{RGB}{200,0,200}
+\usepackage{comment}
+\begin{comment}
+%\setbeamercolor{title}{fg=Color1}
+%Para ajustar el color del titulo, el primer plano se define a través de fg (foreground) y el fondo se define por bg (background)
+\setbeamercolor{title}{fg=Color1, bg=Color2}% Ajuste del título.
+%Ajuste de los títulos de los frames.
+\setbeamercolor{frametitle}{bg=Color1, fg=Color2}
+%Ajuste de la estructura restante del documento. 
+\setbeamercolor{structure}{fg=yellow}
+%Ajuste del color del texto de todas la presentación.
+\setbeamercolor{normal text}{fg=blue,bg=cyan}
+\end{comment}
+%==========================Ajustes del tipo de letra===================== 
+\usefonttheme{serif}
+%Lista de opciones: default, serif, structurebold, structureitalicserif, structuresmallcapsserif, professionalfonts, serifbold, serifitalic
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}%Paquete para teoremas
+\usepackage{graphicx}
+\usepackage{tikz}
+%================Personalizando Comandos==================================
+\newcommand{\norma}[1]{\lVert #1 \rVert}
+\newcommand{\norm}[1]{\left \lVert #1 \right \rVert}
+\newcommand{\br}[1]{\left \lbrace #1 \right\rbrace}
+\newcommand{\mb}[2]{\mathbb{#1}^#2}
+%================Definiendo Teoremas======================================
+\setbeamertemplate{theorems}[numbered]%Numerara teoremas
+\newtheorem{Teo}{\textbf{Teorema}}
+\newtheorem{Def}{\textbf{Definición}}[section]
+\newtheorem{Prop}{\textbf{Proposición}}[section]
+%================Ajustes de video========================================
+\usepackage{animate}
+%ffmpeg -i file_example_MP4_480_1_5MG.mp4 Frames_%04.png
+\usepackage{multimedia}
+%================Titulo de la presentacion===============================
+\title{Documento Beamer para la clase de MM116
+}
+\author{\inst{1}Jose \and \inst{2}Mateo}
+%\setbeamercovered{transparent} 
+%\setbeamertemplate{navigation symbols}{} 
+%===============Ajuste del logo de la presentacion========================
+%\logo{\includegraphics[scale=0.1]{Logo_UNAH_Gris}}
+%\titlegraphic{\includegraphics[scale=0.1]{Logo_UNAH_Gris}}
+\institute{\inst{1} UNAH-CU \and \inst{2} UNAH-VS} 
+%\begin{comment}
+\bfseries
+\titlegraphic{ 
+\begin{tikzpicture}[remember picture,overlay]
+\node at (2.6,2.5){
+    \includegraphics[scale=0.15]{Logo_UNAH_Gris}
+};
+\node at (-2.6,2.5){
+    \includegraphics[scale=0.15]{Logo_UNAH_Gris}
+};
+\end{tikzpicture}
+}
+%\end{comment}
+%\date{} 
+%\subject{} 
+\AtBeginSection[]{
+\begin{frame}
+\tableofcontents[currentsection]
+\end{frame}
+}
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+\begin{frame}{Video}
+\animategraphics[autoplay,loop,width=\linewidth]{10}{Imagenes/Frames_}{0001}{0200}
+\end{frame}
+\section{Álgebra}
+\begin{frame}{Introducción al Álgebra}
+Las principales propiedades del ÁLGEBRA son:\pause
+\begin{itemize}
+\item<1-> Propiedad de tricotomía. 
+\item<2>  Propiedad del neutro para la suma.
+\end{itemize}
+\onslide<3>{El teorema fundamental del algebra establece que un polinomio de grado n tiene exactamente n raices en los numeros complejos.}
+Sea $p(x)$. 
+\begin{Def}[Número positivo]
+Un número real $x$ es positivo si $x>0$.
+\end{Def}
+\end{frame}
+\section{Cálculo}
+\begin{frame}{Introducción al Cálculo}
+Las principales propiedades del ÁLGEBRA son:
+\begin{itemize}
+\item Propiedad de tricotomía. 
+\item  Propiedad del neutro para la suma.
+\end{itemize}
+\end{frame}
+\begin{frame}{Normas vectoriales}
+Una norma $\lVert x \rVert$ ($||x||$), $\norma{x}$.\\
+Algunos conjuntos conocidos $\mathbb{R}$, $\mathbb{C}$, $\mathbb{Q}$\\
+Espacios vectoriales: $\mb{R}{n}$.
+\end{frame}
+\begin{frame}{Referencias}
+\begin{thebibliography}{10}
+\bibitem{Goldbach1742}[Goldbach, 1742]
+Christian Goldbach.
+\newblock A problem we should try to solve before the ISPN ’43 deadline,
+\newblock \emph{Letter to Leonhard Euler}, 1742.
+\end{thebibliography}
+\end{frame}
+\end{document}
