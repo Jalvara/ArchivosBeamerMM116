@@ -1,4 +1,5 @@
 \documentclass[9pt]{beamer}
+\usepackage{pdfpages}
 %\documentclass[12pt,draft]{beamer} %Para dejar solo el contenido
 \usetheme{Berlin}
 %===================Temas predefinidos de colores=========================
@@ -85,7 +86,28 @@
 \begin{frame}
 \titlepage
 \end{frame}
-\section[Teoría Geometría]{Teoría sobre Geomtría Básica}
+\section[Teoría Geometría]{Teoría sobre Álgebra}
+{
+\setbeamercolor{background canvas}{bg=}
+\includepdf[pages={2-8}]{PresentacionCentral.pdf}
+}
+{
+\setbeamercolor{background canvas}{bg=}
+\includepdf[pages={15-20}]{PresentacionCentral.pdf}
+}
+{
+\setbeamercolor{background canvas}{bg=}
+\includepdf[pages={27-33}]{PresentacionCentral.pdf}
+}
+\section[Teoría Geometría]{Teoría sobre Geometría Básica}
+{
+\setbeamercolor{background canvas}{bg=}
+\includepdf[pages={40-44}]{PresentacionCentral.pdf}
+}
+{
+\setbeamercolor{background canvas}{bg=}
+\includepdf[pages={58-62}]{PresentacionCentral.pdf}
+}
 \section[Ejemplos Geometría]{Ejemplos de Problemas de Geométría}
 \begin{comment}
 \begin{frame}{Ejemplos I}
